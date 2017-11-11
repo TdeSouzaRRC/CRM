@@ -4,10 +4,10 @@ class CustomersController < ApplicationController
   end
 
   def alphabetized
-    @customers = Customer.all.order_by("full_name")
+    @customers = Customer.all.order("full_name")
   end
 
   def missing_email
-    @customers = Customer.where(:email_address => nil)
+    @customers = Customer.where(:email_address => "")
   end
 end
