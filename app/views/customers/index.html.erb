@@ -1,2 +1,5 @@
-<h1>Customers#index</h1>
-<p>Find me in app/views/customers/index.html.erb</p>
+<h1 class="customer_header">All Customers</h1>
+
+<% @customers.each do |customer| %>
+    <%= render partial: "customer", object: customer %>
+<% end %>
