@@ -1,2 +1,5 @@
-class Province < ApplicationRecord
+class Province < 
+    validates :name, presence: true
+
+    has_many :customers
 end
