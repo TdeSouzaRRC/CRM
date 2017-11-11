@@ -1,7 +1,14 @@
 <div class="customer">
     <h3><%= customer.full_name %></h3>
-    <p><%= image_tag customer.image %></p>
-    <p><b>Province:</b> </p>
+    <p><%= image_tag customer.image, class: "customer_image" %></p>
+    <p>
+        <b>Province: </b> 
+        <% if(customer.province == nil) then %>
+            None 
+        <% else %>
+            <%= customer.province.name %>
+        <% end %> 
+    </p>
     <p><%= customer.phone_number %></p>
     <p><%= customer.email_address %></p> 
 </div>

@@ -1,5 +1,7 @@
-<h1 class="customer_header">All Customers</h1>
+<div class="customer_container">
+    <h2 class="customer_header">All Customers</h2>
 
-<% @customers.each do |customer| %>
-    <%= render partial: "customer", object: customer %>
-<% end %>
+    <% @customers.each do |customer| %>
+        <%= render partial: "customer", object: customer %>
+    <% end %>
+</div>
